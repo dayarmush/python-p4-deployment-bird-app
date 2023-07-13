@@ -8,6 +8,8 @@ from flask_migrate import Migrate
 from flask_restful import Api, Resource
 import sys
 print(sys.path)
+sys.path.append('/opt/render/project/src/server')
+print(sys.path)
 from models import db, Bird
 
 app = Flask(
