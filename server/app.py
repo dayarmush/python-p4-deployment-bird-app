@@ -7,9 +7,7 @@ from flask import Flask, jsonify, request, make_response, render_template
 from flask_migrate import Migrate
 from flask_restful import Api, Resource
 import sys
-print(sys.path)
 sys.path.append('/opt/render/project/src/server')
-print(sys.path)
 from models import db, Bird
 
 app = Flask(
@@ -29,7 +27,7 @@ db.init_app(app)
 @app.route('/')
 @app.route('/<int:id>')
 def index(id=0):
-    return '<h1>test</h1>'
+    return render_template("index.html", id=id)
 
 api = Api(app)
 
