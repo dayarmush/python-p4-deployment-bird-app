@@ -29,7 +29,7 @@ db.init_app(app)
 @app.route('/')
 @app.route('/<int:id>')
 def index(id=0):
-    return render_template("index.html")
+    return '<h1>test</h1>'
 
 api = Api(app)
 
